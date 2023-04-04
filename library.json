@@ -1,0 +1,20 @@
+{
+    "name": "ESP-Options",
+    "version": "0.0.1",
+    "description": "ESP Options provides a startup menu that allows a user to select program options using the onboard button",
+    "keywords": "menu, led, button, options, startup, settings",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Roam-Studios/esp-options"
+    },
+    "authors": [
+        {
+            "name": "Swapnil Pande",
+            "email": "swapnil.pande98@gmail.com",
+            "url": "https://www.swapnilpande.me"
+        }
+    ],
+    "license": "MIT",
+    "frameworks": "arduino",
+    "platforms": "esp32dev"
+}
