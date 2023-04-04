@@ -24,13 +24,13 @@ public:
 
 private:
     // the number of options
-    size_t num_options;
+    size_t numOptions;
 
     // the list of options
     std::vector<String> options;
 
     // the selected option
-    int selected_option;
+    int selectedOption;
 
     // Built in LED pin number
     static const int LED_PIN = 2;

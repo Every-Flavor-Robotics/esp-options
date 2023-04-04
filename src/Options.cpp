@@ -48,11 +48,11 @@ void blinkOffbeat(int pin, int n)
     }
 }
 
-Options::Options(int numOptions) : num_options(numOptions)
+Options::Options(int numOptions) : numOptionss(numOptions)
 {
     // Create options array
-    options.reserve(num_options);
-    selected_option = -1;
+    options.reserve(numOptionss);
+    selectedOption = -1;
 
     // Configure LED pin
     pinMode(LED_PIN, OUTPUT);
@@ -64,10 +64,10 @@ Options::Options(int numOptions) : num_options(numOptions)
 
 int Options::addOption(String name)
 {
-    if (options.size() < num_options)
+    if (options.size() < numOptionss)
     {
         options.push_back(name);
-        return options.size() - 1;
+        return options.size();
     }
     else
     {
@@ -77,12 +77,12 @@ int Options::addOption(String name)
 
 int Options::getSelectedOption()
 {
-    return selected_option;
+    return selectedOption;
 }
 
 String Options::getSelectedOptionName()
 {
-    return options[selected_option];
+    return options[selectedOption];
 }
 
 void Options::run()
@@ -122,7 +122,7 @@ void Options::run()
         }
 
         // check if number of presses is valid - option selected
-        if (numPresses <= num_options && numPresses > 0)
+        if (numPresses <= numOptionss && numPresses > 0)
         {
             // Confirm selection
             blinkNTimesSlow(LED_PIN, numPresses);
@@ -160,7 +160,7 @@ void Options::run()
                 blinkNTimesSlow(LED_PIN, numPresses);
 
                 // set selected option
-                selected_option = numPresses;
+                selectedOption = numPresses - 1;
                 selectionValid = true;
             }
 
