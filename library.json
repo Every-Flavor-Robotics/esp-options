@@ -1,6 +1,6 @@
 {
     "name": "ESP-Options",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "ESP Options provides a startup menu that allows a user to select program options using the onboard button",
     "keywords": "menu, led, button, options, startup, settings",
     "repository": {
