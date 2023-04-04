@@ -67,7 +67,7 @@ int Options::addOption(String name)
     if (options.size() < numOptionss)
     {
         options.push_back(name);
-        return options.size();
+        return options.size() - 1;
     }
     else
     {
